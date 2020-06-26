@@ -82,7 +82,7 @@ EOF
 log_msg "Sending update to Route 53:"
 aws route53 change-resource-record-sets \
 	--hosted-zone-id $ZONE_ID \
-	--change-batch file://$TMPFILE >> $LOG_FILE
+	--change-batch file://$TMPFILE >> $LOG_FILE 2>&1
 echo >> $LOG_FILE
 
 rm $TMPFILE
