@@ -5,6 +5,9 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE=$DIR/log
 IP_FILE=$DIR/current.ip
 
+# Make sure /usr/local/bin is in PATH
+PATH="/usr/local/bin:$PATH"
+
 # Load sensitive stuff from env file. Exposes:
 #   ZONE_ID
 #   RECORDSET
