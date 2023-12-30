@@ -82,6 +82,7 @@ cat > $TMPFILE << EOF
 EOF
 
 # Send to AWS
+log_msg "New IP: $IP"
 log_msg "Sending update to Route 53:"
 aws route53 change-resource-record-sets \
 	--hosted-zone-id $ZONE_ID \
